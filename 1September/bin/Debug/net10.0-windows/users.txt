@@ -1,0 +1,3 @@
+﻿Kago|Molefe|1234|0712345678|kago@email.com
+John|Smith|password|0823456789|john@email.comKago|Kgaladi|#Kargo101|0748055174|kgaladikago08@gmail.com
+Paakanyo|Kgaladi|#Paakanyo08|0748055174|kgaladikago08@gmail.com
