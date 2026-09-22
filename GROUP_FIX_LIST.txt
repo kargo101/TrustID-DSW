@@ -1,0 +1,41 @@
+TRUSTID - CURRENT ITEMS FOR THE GROUP TO FINISH
+
+1. Verification requests are only stored in memory.
+When the app closes, pending verification requests disappear.
+The group should save verification requests to a file or database and load them when the app starts.
+
+2. Reviews are only stored in memory.
+Reviews disappear after the app closes.
+The group should add review persistence.
+
+3. Verification does not save the actual document file.
+The user enters document type, number and expiry date, but the VerificationRequest model only stores the document type and priority.
+The group should add document number, expiry date and file path to VerificationRequest.
+
+4. The Admin "View File" item does not open a real uploaded document.
+This depends on fixing item 3.
+
+5. Qualification approval is not connected to the admin area.
+Qualifications are saved to qualifications.txt, but there is no full approve/reject workflow.
+
+6. Admin Reports is mostly a visual screen.
+The group should calculate the real report numbers and charts from saved app data.
+
+7. Admin Reviews needs full moderation actions.
+The ReviewManager has flag/remove/dismiss methods, but the admin screen does not fully use them.
+
+8. Notification Preferences do not perform actions yet.
+Email notifications, push notifications, transaction alerts and public profile visibility are only checkboxes.
+
+9. Forgot Password is suitable for a class prototype, but it is not secure enough for a real app.
+A real system should send an OTP or reset link to the user's email before allowing a password reset.
+
+10. users.txt still stores the old plain-text password format for compatibility with older code.
+For a real system, the group should remove this old file flow and use only the hashed trustid_users.dat system.
+
+11. Transactions are saved to transactions.txt instead of using the Transaction model as the main storage system.
+The group can later move this into one proper data layer or database.
+
+12. The Visual Studio Microsoft.iOS.Sdk error is a machine/SDK installation problem, not TrustID business logic.
+If it still appears, repair the installed .NET SDK/workloads in Visual Studio or run "dotnet workload repair".
+The TrustID project itself targets Windows Forms only.
